@@ -13,8 +13,8 @@
 <!--                                                               -->
 <!--  Refer to this file by the following public identifier or an  -->
 <!--       appropriate system identifier                           -->
-<!-- PUBLIC "-//OASIS//ENTITIES DITA MT Guide Map//EN"         -->
-<!--       Delivered as file "guideMap.ent"                             -->
+<!-- PUBLIC "-//OASIS//ELEMENTS DITA Map Group Domain//EN"         -->
+<!--       Delivered as file "mapGroup.mod"                             -->
 <!-- ============================================================= -->
 <!-- SYSTEM:     Darwin Information Typing Architecture (DITA)     -->
 <!--                                                               -->
@@ -45,7 +45,7 @@
 <!--                    ELEMENT EXTENSION ENTITY DECLARATIONS      -->
 <!-- ============================================================= -->
 
-<!--<!ENTITY % guideMap-d-flattopicref
+<!ENTITY % guideMap-d-topicref
   "anchorref |
    keydef |
    mapref |
@@ -53,7 +53,7 @@
    topichead |
    topicset |
    topicsetref"
->-->
+>
 
 
 <!-- ============================================================= -->

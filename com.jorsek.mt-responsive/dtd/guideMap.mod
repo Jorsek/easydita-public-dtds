@@ -404,7 +404,7 @@ PUBLIC "-//OASIS//ELEMENTS DITA Guide Map//EN"
                %topicref-atts;
                %select-atts;"
 >
-<!ELEMENT guidemap %guidemap.content;>
+<!ELEMENT guidemap    %guidemap.content;>
 <!ATTLIST guidemap
               %map.attributes;
               %arch-atts;
@@ -415,7 +415,57 @@ PUBLIC "-//OASIS//ELEMENTS DITA Guide Map//EN"
 
 
 
+<!--                    LONG NAME: Flat Topic Reference                 -->
+<!ENTITY % flattopicref.content
+                       "((%topicmeta;)?,
+                         (%anchor; |
+                          %navref;)*)"
+>
+<!ENTITY % flattopicref.attributes
+              "navtitle
+                          CDATA
+                                    #IMPLIED
+               href
+                          CDATA
+                                    #IMPLIED
+               keyref
+                          CDATA
+                                    #IMPLIED
+               keys
+                          CDATA
+                                    #IMPLIED
+               query
+                          CDATA
+                                    #IMPLIED
+               copy-to
+                          CDATA
+                                    #IMPLIED
+               outputclass
+                          CDATA
+                                    #IMPLIED
+             %topicref-atts;
+               %univ-atts;"
+>
+<!ELEMENT  flattopicref %flattopicref.content;>
+<!ATTLIST  flattopicref %flattopicref.attributes;>
 
+<!--                    LONG NAME: Flat Topic Group                      -->
+<!ENTITY % flattopicgroup.content
+                       "((%topicmeta;)?,
+                         (%anchor; |
+                          %data.elements.incl; |
+                          %navref; |
+                          %flattopicref;)*)"
+>
+<!ENTITY % flattopicgroup.attributes
+              "outputclass
+                          CDATA
+                                    #IMPLIED
+               %topicref-atts;
+               %univ-atts;"
+>
+<!ELEMENT  flattopicgroup %flattopicgroup.content;>
+<!ATTLIST  flattopicgroup %flattopicgroup.attributes;>
 
 
 <!-- ============================================================= -->
@@ -424,9 +474,8 @@ PUBLIC "-//OASIS//ELEMENTS DITA Guide Map//EN"
 
 <!ATTLIST  guidemap     %global-atts;  class CDATA "- map/map guidemap/guidemap "  >
 <!ATTLIST  navref       %global-atts;  class CDATA "- map/navref guidemap/navref"      >
-<!ATTLIST  topicref     %global-atts;  class CDATA "- map/topicref guidemap/topicref"     >
-<!ATTLIST  flattopicref %global-atts;  class CDATA "- map/topicref guideMapGroup/flattopicref"     >
-<!ATTLIST  flattopicgroup   %global-atts;  class CDATA "- map/topicref guideMapGroup/flattopicgroup"     >
+<!ATTLIST  flattopicref %global-atts;  class CDATA "- map/topicref guidemap/flattopicref"     >
+<!ATTLIST  flattopicgroup   %global-atts;  class CDATA "- map/topicref guidemap/flattopicgroup"     >
 <!ATTLIST  anchor       %global-atts;  class CDATA "- map/anchor guidemap/anchor"       >
 <!ATTLIST  reltable     %global-atts;  class CDATA "- map/reltable guidemap/reltable"     >
 <!ATTLIST  relheader    %global-atts;  class CDATA "- map/relheader guidemap/relheader"    >

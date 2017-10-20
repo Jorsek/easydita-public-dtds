@@ -67,14 +67,10 @@
 <!--             DOMAIN ENTITY DECLARATIONS                        -->
 <!-- ============================================================= -->
 
-<!--<!ENTITY % mapgroup-d-dec
+<!ENTITY % mapgroup-d-dec
   PUBLIC "-//OASIS//ENTITIES DITA 1.3 Map Group Domain//EN"
          "../../org.oasis-open.dita.v1_3/dtd/base/dtd/mapGroup.ent"
->%mapgroup-d-dec;-->
-<!ENTITY % guideMapGroup-d-dec
-  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Map Group Domain//EN"
-         "guideMapGroup.ent"
->%guideMapGroup-d-dec;
+>%mapgroup-d-dec;
 
 <!--<!ENTITY % flattopicgroup-d-dec
   PUBLIC "-//OASIS//ENTITIES DITA 1.3 Map Group Domain//EN"
@@ -167,11 +163,6 @@
                         the name of the domain(s) in which the
                         extension was declared                     -->
 
-<!ENTITY % topicref     "topicref |
-                        %guideMapGroup-d-topicref; |
-                        %ditavalref-d-topicref; |
-                        %glossref-d-topicref; 
-                        ">
 
 <!ENTITY % keywords     "keywords |
                          %delay-d-keywords;
@@ -234,7 +225,7 @@
 <!-- ============================================================= -->
 
 <!ENTITY included-domains
-                          "&guideMapGroup-d-att;
+                          "
                            &abbrev-d-att;
                            &delay-d-att;
                            &deliveryTargetAtt-d-att;
@@ -250,6 +241,7 @@
                            &ui-d-att;
                            &ut-d-att;
                            &xml-d-att;
+                           &guidemap-att;
   "
 >
 
@@ -270,7 +262,7 @@
 >%map-type;
 
 <!ENTITY % guidemap-type
-    PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Guide Map//EN"
+    PUBLIC "-//OASIS//ELEMENTS DITA 1.3 GuideMap//EN"
            "guideMap.mod"
 >%guidemap-type;
 
@@ -278,16 +270,10 @@
 <!--                    DOMAIN ELEMENT INTEGRATION                 -->
 <!-- ============================================================= -->
 
-<!--<!ENTITY % mapgroup-d-def
+<!ENTITY % mapgroup-d-def
   PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Map Group Domain//EN"
          "../../org.oasis-open.dita.v1_3/dtd/base/dtd/mapGroup.mod"
->%mapgroup-d-def;-->
-
-<!ENTITY % guideMapGroup-d-def
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Map Group Domain//EN"
-         "guideMapGroup.mod"
->%guideMapGroup-d-def;
-
+>%mapgroup-d-def;
 
 <!--<!ENTITY % flattopicgroup-d-def
   PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Map Group Domain//EN"
