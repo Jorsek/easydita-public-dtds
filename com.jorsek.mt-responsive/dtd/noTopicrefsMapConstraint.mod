@@ -6,6 +6,7 @@
 <!ENTITY % navref "navref" >
 <!ENTITY % reltable "reltable" >
 <!ENTITY % mapref "mapref" >
+<!ENTITY % keydef "keydef" >
 
 <!ENTITY % data.elements.incl
   "%data; |
@@ -21,5 +22,6 @@
                           %data.elements.incl; |
                           %navref; |
                           %reltable; |
-                          %mapref;)* )"
+                          %mapref; |
+                          %keydef;)* )"
 >

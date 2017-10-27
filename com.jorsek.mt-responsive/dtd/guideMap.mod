@@ -114,7 +114,7 @@ PUBLIC "-//OASIS//ELEMENTS DITA Guide Map//EN"
 <!--                    COMMON ATTLIST SETS                        -->
 <!-- ============================================================= -->
 
-<!ENTITY % topicref-atts
+<!ENTITY % flattopicref-atts
               "collection-type
                           (choice |
                            family |
@@ -177,7 +177,7 @@ PUBLIC "-//OASIS//ELEMENTS DITA Guide Map//EN"
                           CDATA
                                     #IMPLIED"
 >
-<!ENTITY % topicref-atts-no-toc
+<!ENTITY % flattopicref-atts-no-toc
               "collection-type
                           (choice |
                            family |
@@ -240,7 +240,7 @@ PUBLIC "-//OASIS//ELEMENTS DITA Guide Map//EN"
                           CDATA
                                     #IMPLIED"
 >
-<!ENTITY % topicref-atts-no-toc-no-keyscope
+<!ENTITY % flattopicref-atts-no-toc-no-keyscope
               "collection-type
                           (choice |
                            family |
@@ -300,7 +300,7 @@ PUBLIC "-//OASIS//ELEMENTS DITA Guide Map//EN"
                           CDATA
                                     #IMPLIED"
 >
-<!ENTITY % topicref-atts-without-format
+<!ENTITY % flattopicref-atts-without-format
               "collection-type
                           (choice |
                            family |
@@ -382,7 +382,6 @@ PUBLIC "-//OASIS//ELEMENTS DITA Guide Map//EN"
                           %data.elements.incl; |
                           %navref; |
                           %reltable; |
-                          %flattopicgroup; |
                           %flattopicref;)* )"
 >
 
@@ -404,7 +403,7 @@ PUBLIC "-//OASIS//ELEMENTS DITA Guide Map//EN"
                %topicref-atts;
                %select-atts;"
 >
-<!ELEMENT guidemap    %guidemap.content;>
+<!ELEMENT guidemap %guidemap.content;>
 <!ATTLIST guidemap
               %map.attributes;
               %arch-atts;
@@ -415,11 +414,14 @@ PUBLIC "-//OASIS//ELEMENTS DITA Guide Map//EN"
 
 
 
+
 <!--                    LONG NAME: Flat Topic Reference                 -->
 <!ENTITY % flattopicref.content
-                       "((%topicmeta;)?,
+                        "((%topicmeta;)?,
                          (%anchor; |
-                          %navref;)*)"
+                          %data.elements.incl; |
+                          %navref; 
+                          )*)"
 >
 <!ENTITY % flattopicref.attributes
               "navtitle
@@ -449,23 +451,8 @@ PUBLIC "-//OASIS//ELEMENTS DITA Guide Map//EN"
 <!ELEMENT  flattopicref %flattopicref.content;>
 <!ATTLIST  flattopicref %flattopicref.attributes;>
 
-<!--                    LONG NAME: Flat Topic Group                      -->
-<!ENTITY % flattopicgroup.content
-                       "((%topicmeta;)?,
-                         (%anchor; |
-                          %data.elements.incl; |
-                          %navref; |
-                          %flattopicref;)*)"
->
-<!ENTITY % flattopicgroup.attributes
-              "outputclass
-                          CDATA
-                                    #IMPLIED
-               %topicref-atts;
-               %univ-atts;"
->
-<!ELEMENT  flattopicgroup %flattopicgroup.content;>
-<!ATTLIST  flattopicgroup %flattopicgroup.attributes;>
+
+
 
 
 <!-- ============================================================= -->
@@ -474,8 +461,9 @@ PUBLIC "-//OASIS//ELEMENTS DITA Guide Map//EN"
 
 <!ATTLIST  guidemap     %global-atts;  class CDATA "- map/map guidemap/guidemap "  >
 <!ATTLIST  navref       %global-atts;  class CDATA "- map/navref guidemap/navref"      >
-<!ATTLIST  flattopicref %global-atts;  class CDATA "- map/topicref guidemap/flattopicref"     >
-<!ATTLIST  flattopicgroup   %global-atts;  class CDATA "- map/topicref guidemap/flattopicgroup"     >
+<!ATTLIST  topicref     %global-atts;  class CDATA "- map/topicref guidemap/topicref"     >
+<!ATTLIST  flattopicref %global-atts;  class CDATA "- map/topicref guideMapGroup/flattopicref guideMap/flattopicref"     >
+<!ATTLIST  flattopicgroup   %global-atts;  class CDATA "- map/topicref guideMapGroup/flattopicgroup guideMap/flattopicgroup"     >
 <!ATTLIST  anchor       %global-atts;  class CDATA "- map/anchor guidemap/anchor"       >
 <!ATTLIST  reltable     %global-atts;  class CDATA "- map/reltable guidemap/reltable"     >
 <!ATTLIST  relheader    %global-atts;  class CDATA "- map/relheader guidemap/relheader"    >

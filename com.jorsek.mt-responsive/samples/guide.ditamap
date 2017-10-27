@@ -2,6 +2,9 @@
 <!DOCTYPE guidemap PUBLIC "-//Jorsek//DTD DITA MT Guide//EN" "../dtd/guideMap.dtd">
 <!--<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">-->
 <guidemap xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" domains="(guidemap-d) (topic indexing-d)" ditaarch:DITAArchVersion="1.1" id="ditamap-7240" title="easyDITA Customization Guide">
-   
+   <topicref id="temp-topicref_1328299367480" href="topic.dita">
+      <topicref></topicref>
+   </topicref>
+   <mapref href="subcategory.ditamap"/>
 
 </guidemap>

@@ -1,19 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"          
-  prefer="public">  
-
-<!-- Entries added for new specialized shells     -->
-
-<!-- Technical Content types -->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  
   <public publicId="-//JORSEK//DTD DITA MT Category Map//EN" uri="dtd/categoryMap.dtd"/>
   <public publicId="-//JORSEK//DTD DITA MT Guide Map//EN" uri="dtd/guideMap.dtd"/>
-
-<!-- Entries for specialized elements  -->
-     
-  <public publicId="-//OASIS//ELEMENTS DITA Category Map//EN" uri="dtd/categoryMap.mod"></public>
-  <public publicId="-//OASIS//ELEMENTS DITA Guide Map//EN" uri="dtd/guideMap.mod"></public>
   
-
   
-
-</catalog>  
+  <public publicId="-//OASIS//ELEMENTS DITA MT Category Map//EN" uri="dtd/categoryMap.mod"/>
+  <public publicId="-//OASIS//ELEMENTS DITA MT Guide Map//EN" uri="dtd/guideMap.mod"/>
+  
+  <public publicId="-//OASIS//ELEMENTS DITA Map Group Domain//EN" uri="dtd/guideMapGroup.mod"/>
+</catalog>
